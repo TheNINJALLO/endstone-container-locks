@@ -20,8 +20,9 @@
 </p>
 
 <p align="center">
-  <a href="#overview">Overview</a> &bull;
-  <a href="#compatibility">Compatibility</a> &bull;
+  <a href="#what-it-does">What it does</a> &bull;
+  <a href="#how-to-use">How to use</a> &bull;
+  <a href="#commands-and-permissions">Commands</a> &bull;
   <a href="#install">Install</a> &bull;
   <a href="https://github.com/TheNINJALLO/endstone-container-locks/releases">Releases</a>
 </p>
@@ -30,9 +31,24 @@
 
 A container locking system for Minecraft Bedrock servers using Endstone. This release is aligned with Endstone 0.11.8 and Minecraft Bedrock Dedicated Server 1.26.40, and is distributed as a Python wheel for direct installation in an Endstone server.
 
-## Capabilities
+## What it does
 
--
+- Locks supported containers and doors to their owner and blocks unauthorized access or breaking.
+- Supports per-container and global trust lists for shared bases and storage rooms.
+- Gives operators a controlled bypass and master-unlock path.
+
+## How to use
+
+1. Install and start the plugin, then place or interact with a supported container to establish ownership.
+2. Use `/trust add <player>` or `/trust remove <player>` while managing shared access; use `/trust list` to review it.
+3. Use the `globaladd`, `globalremove`, and `globallist` actions for access that should apply across owned containers.
+4. Keep `container_locks.admin` limited to staff because it bypasses ownership protections.
+
+## Commands and permissions
+
+| Command / usage | What it does | Access |
+|---|---|---|
+| `/trust <add\|remove\|list\|globaladd\|globalremove\|globallist> [playername]` | Manage trusted players for your containers and doors. | `container_locks.command.trust` |
 
 ## Compatibility
 
