@@ -4,12 +4,12 @@ build-backend = "hatchling.build"
 
 [project]
 name = "endstone-container-locks"
-version = "1.4.2"
+version = "1.4.3"
 description = "A container locking system for Minecraft Bedrock servers using Endstone"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
-    "endstone>=0.11.9,<0.12",
+    "endstone>=0.11.16,<0.12",
 ]
 authors = [
     { name = "Your Name", email = "your.email@example.com" }
